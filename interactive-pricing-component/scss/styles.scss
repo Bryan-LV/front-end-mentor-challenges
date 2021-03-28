@@ -1,0 +1,119 @@
+@use './font.scss'as font;
+@use './color-variables.scss'as color;
+
+// price component
+.price-component-bg {
+  background-color: color.$bg-color;
+  background-image: url('./images/bg-pattern.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.price-component {
+  border-radius: 8px;
+  padding: 12px;
+}
+
+// texts
+
+.header-text-container {
+  text-align: center;
+  padding: 8vh;
+
+  .title {
+    font-size: font.$font-size-lg;
+    color: color.$secondary;
+    margin: 0;
+  }
+
+  .sub-title {
+    font-size: font.$font-size-base;
+    color: color.$primary;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    span {
+      padding: 0 1px;
+    }
+  }
+}
+
+.card {
+  background-color: color.$white;
+  padding: 20px;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.card-top {
+  text-align: center;
+
+  h3 {
+    font-size: font.$font-size-base;
+    font-weight: font.$font-weight-medium;
+    text-transform: uppercase;
+  }
+
+}
+
+.billing-type {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .billing-text {
+    font-size: font.$font-size-base;
+    font-weight: font.$font-weight-medium;
+  }
+
+  .toggler {
+    width: 60px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: color.$primary;
+    position: relative;
+
+    .toggler-circle {
+      width: 20px;
+      height: 20px;
+      background-color: color.$white;
+      border-radius: 50%;
+      position: absolute;
+      left: 3px;
+      top: 2px;
+    }
+
+    .toggler-circle.yearly {
+      left: unset;
+      right: 3px;
+    }
+  }
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.btn {
+  background-color: color.$secondary;
+  color: color.$pale-blue;
+  padding: 12px 30px;
+  border-radius: 20px;
+  border: none;
+  font-weight: font.$font-weight-medium;
+  letter-spacing: .1ch;
+  display: block;
+  margin: 0 auto;
+}
